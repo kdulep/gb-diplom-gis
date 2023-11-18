@@ -28,6 +28,11 @@ class CoordinateCaptureTool(QgsMapToolEmitPoint):
         point = self.toMapCoordinates(event.pos())
         self.callback_function(point)
 
+    def keyPressEvent(self, event: QKeyEvent):
+        if event.key() == Qt.Key_Escape:
+            print("Break key pressed. Exiting.")
+            self.deactivate()
+            self.canvas.unsetMapTool(self)
             
 def capture_coordinates(clicked_point):
     print(f"Clicked at: {clicked_point.x()}, {clicked_point.y()}")
