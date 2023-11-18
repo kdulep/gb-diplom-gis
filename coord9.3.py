@@ -1,17 +1,10 @@
 from qgis.gui import QgsMapToolEmitPoint
-from PyQt5.QtGui import QColor
 from qgis.core import QgsVectorLayer, QgsPointXY, QgsSpatialIndex, QgsGeometry
-from qgis.gui import QgsMapToolEmitPoint
 from PyQt5.QtGui import QColor, QKeyEvent
 from PyQt5.QtCore import Qt
-from qgis.core import QgsPointXY, QgsSpatialIndex, QgsGeometry
 from qgis.utils import iface
 from PyQt5.QtGui import QClipboard
 import os
-
-from qgis.core import QgsPointXY
-from qgis.gui import QgsMapToolEmitPoint
-from PyQt5.QtGui import QColor
 
 textToCopy=""
 with open("clicklog.txt","w") as myfile:
